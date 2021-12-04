@@ -53,10 +53,10 @@ if __name__ == "__main__":
     with open("message.txt", "rb") as file:
         content = file.read()   
 
-    # mac = generate_MAC(key, content)
+     mac = generate_MAC(key, content)
 
-    # with open("message.mac", "wb") as file:
-    #     file.write(mac)
+     with open("message.mac", "wb") as file:
+         file.write(mac)
 		with open("message.mac", "rb") as file:
 	       mac = file.read()
 
@@ -74,10 +74,10 @@ Pomoću GNU Wget softvera preuzeli smo potrebne file-ove s poslužitelja.
 
 `if __name__ == "__main__":
 key = "strinic_ela".encode()
-# with open("./challenges/strinic_ela/mac_challenge/order_2.txt", "rb") as file:
-#     content = file.read()
-# with open("./challenges/strinic_ela/mac_challenge/order_2.sig", "rb") as file:
-#     mac = file.read()
+ with open("./challenges/strinic_ela/mac_challenge/order_2.txt", "rb") as file:
+     content = file.read()
+ with open("./challenges/strinic_ela/mac_challenge/order_2.sig", "rb") as file:
+     mac = file.read()
 for ctr in range(1, 11):
 	msg_filename = f"./challenges/strinic_ela/mac_challenge/order_{ctr}.txt"
 	sig_filename = f"./challenges/strinic_ela/mac_challenge/order_{ctr}.sig"
